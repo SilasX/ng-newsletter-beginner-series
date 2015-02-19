@@ -3,6 +3,7 @@
   <head>
     <script src="js/vendor/custom.modernizr.js"></script>
     <script src="js/vendor/angular.min.js"></script>
+    <script src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/foundation.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -15,9 +16,19 @@
         + '.js><\/script>');
     </script>
     <script src="js/vendor/foundation.min.js"></script>
-    <script src="js/beginner.js"></script>
     <script type="text/javascript">
       $(document).foundation();
     </script>
+    <div>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <h1>Hello, {{ yourName }}!</h1>
+      <h1>And to {{ name }} as well!</h1>
+      <h1 ng-controller="MyController">Let's not forget {{ person.name }}!
+          <p ng-controller="ChildController"><a ng-click="sayHello()">Say Hello!</a>
+          {{ person.name }} was greeted? {{ person.greeted}}</p>
+      </h1>
+    </div>
+  </body>
   </body>
 </html>
+
